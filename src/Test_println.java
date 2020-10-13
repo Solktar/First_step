@@ -14,10 +14,10 @@ public class Test_println {
         /*
         Ещё коммент
         */
-        //System.out.print("Ну привет.");
+        //System.out.print("Ну привет.\n");
 
-        System.out.print("\n"+"\n");
-        System.out.println("A = "+A+"\n"+"B = "+B+"\n"+"A + B = "+C+"\n"+"A + B x B = "+D);
+        //System.out.println("\n"+"\n");
+        System.out.println("\nA = "+A+"\n"+"B = "+B+"\n"+"A + B = "+C+"\n"+"A + B x B = "+D);
         System.out.printf("B = %d, A = %d\n", B, A);
         System.out.printf("\nИмя: %s \nВозраст: %d \nВес: %.1f кг\n", name, D, mass);
     }

@@ -1,8 +1,6 @@
-import javax.management.StringValueExp;
-
 class Other {
 
-        public static void main(String[] args) {
+    public static void main(String[] args) {
 
 //Расчет числа кубических дюймов в кубе объемом в 1 куб. милю
 
@@ -15,8 +13,14 @@ class Other {
             ci = im * im * im;
 
             System.out.println("B одной кубической миле содержится " + ci + " кубических дюймов");*/
-String FFF="ff12gh34j";
-            int f = Integer.parseInt(FFF);
-                    System.out.println(f);
-        }
+        double a=Math.sqrt(3+2);
+
+        String FFF = "123";
+        int f = Integer.parseInt(FFF);
+        System.out.println(f+ "\n" +a+ "\n");
+
+/*        if (mouse != 0 && weight / mouse < 1000) {
+            mInfoTextView.setText("Можно кормить кота");
+            val < 0 ? -val : val;*/
+    }
 }

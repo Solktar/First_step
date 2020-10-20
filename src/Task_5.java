@@ -6,9 +6,9 @@ public class Task_5 {
         System.out.println("Сейчас таблицу умножения показывать буду.");
         System.out.println("Введи число, от 1 до 10.");
         byte i = sc.nextByte();
-        if (i<1 | i>10){
+       /* if (i<1 || i>10){
             System.out.println("Нет, так не пойдёт.");
-        }
+        }*/
         if (i>=1 & i<=10){
         System.out.println("Держи: \n" +
                 i + "x1=" + i + "\n" +
@@ -21,6 +21,9 @@ public class Task_5 {
                 i + "x8=" + i * 8 + "\n" +
                 i + "x9=" + i * 9 + "\n" +
                 i + "x10=" + i * 10 + "\n");}
+        else {
+            System.out.println("Нет, так не пойдёт.");
+        }
 
     }
 }

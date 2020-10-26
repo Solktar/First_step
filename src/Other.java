@@ -1,6 +1,38 @@
-class Other {
+import java.util.Formatter;
+
+class FormatDemo1 {
+    public static void main(String[] args) {
+        double x = 1000.0 / 3.0;
+        System.out.println("Строка без форматирования: " + x);
+
+        Formatter formatter = new Formatter();
+        formatter.format("Строка c форматированием: %.2f%n", x);
+        formatter.format("Строка c форматированием: %8.3f%n", x);
+        formatter.format("Строка c форматированием: %16.40f%n", x);
+        System.out.println(formatter);
+        System.out.printf("%.2f", x);
+    }
+}
+
+public class Other {
 
     public static void main(String[] args) {
+        String data = "name:Igor\nsurname:Kolashnikov\nage:14\ntime:14:55";
+//разбиваем строку на несколько подстрок на основании
+// встречаемого символа новой строки
+        String[] lines = data.split("\n");
+//проходим каждую подстроку
+        for (String line : lines) {
+            //находим индекс первого вхождения символа ":" в подстроке
+            int pos = line.indexOf(":");
+            //вычленяем имя атрибута из подстроки
+            String attributeName = line.substring(0, pos);
+            //вычленяем значение атрибута
+            String value = line.substring(pos + 1, line.length());
+            //вывод на экран вычлененных значений в нужном нам формате.
+            System.out.println(attributeName + " - " + value);
+        }
+
        /* int sample[] = new int[10];
         int i;
         for (i = 0; i < 10; i = i + 1) {

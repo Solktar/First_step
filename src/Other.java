@@ -1,4 +1,4 @@
-import java.util.Formatter;
+/*import java.util.Formatter;
 
 class FormatDemo1 {
     public static void main(String[] args) {
@@ -32,6 +32,56 @@ public class Other {
             //вывод на экран вычлененных значений в нужном нам формате.
             System.out.println(attributeName + " - " + value);
         }
+    }
+}
+*/
+class bubbleSort { //сортировка пузырьком
+    public static void main(String[] args) {
+        int[] arr = {4, 9, 8, 1, 3, 2, 4};
+        System.out.println(arr);
+        int a;
+        for (a = 0; a < arr.length; a++) {
+            System.out.println("Элемент arr[" + a + "]: " + arr[a]);
+        }
+    /*Внешний цикл каждый раз сокращает фрагмент массива,
+      так как внутренний цикл каждый раз ставит в конец
+      фрагмента максимальный элемент*/
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+            /*Сравниваем элементы попарно,
+              если они имеют неправильный порядок,
+              то меняем местами*/
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
+                }
+            }
+        }
+        int b;
+        for (b = 0; b < arr.length; b++) {
+            System.out.println("Элемент sample[" + b + "]: " + arr[b]);
+        }
+        //Сортировка вставками
+        int temp, j;
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i] > arr[i + 1]) {
+                temp = arr[i + 1];
+                arr[i + 1] = arr[i];
+                j = i;
+                while (j > 0 && temp < arr[j - 1]) {
+                    arr[j] = arr[j - 1];
+                    j--;
+                }
+                arr[j] = temp;
+            }
+        }
+    }
+}
+
+
+
+
 
        /* int sample[] = new int[10];
         int i;
@@ -47,8 +97,7 @@ public class Other {
             }
             System.out.println(x);
         }*/
-    }
-}
+
 /*
 while(условие) {
     // тело цикла
